@@ -3,6 +3,7 @@
 from flask import Flask, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime, timedelta
+from datetime import datetime, timezone
 
 # Initialize the Flask app and database
 app = Flask(__name__)
@@ -39,7 +40,7 @@ def track_task():
 
 @app.route('/overview/<string:period>', methods=['GET'])
 def get_overview(period):
-    today = datetime.utcnow()
+    today = datetime.now(timezone.utc)
     if period == 'day':
         start_date = today
     elif period == 'week':
