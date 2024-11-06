@@ -1,19 +1,29 @@
 // frontend/screens/OverviewScreen.js
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, TouchableOpacity, Linking } from 'react-native';
+import styles from './OverviewScreen.styles';
 
 export default function OverviewScreen({ navigation }) {
   return (
-      <View>
-          <h1>Overview Screen</h1>
-          <h2>Calculate your Carbon Footprint</h2>
-          <a href="https://www.footprintcalculator.org/home/en">Footprint Calculator</a>
+    <View style={styles.container}>
+      <Text style={styles.title}>Overview Screen</Text>
+      <Text style={styles.subtitle}>Calculate your Carbon Footprint</Text>
 
+      {/* Link to the Footprint Calculator */}
+      <Text
+        style={styles.link}
+        onPress={() => Linking.openURL('https://www.footprintcalculator.org/home/en')}
+      >
+        Footprint Calculator
+      </Text>
 
-          <Button
-              title="Go to Habit Screen"
-              onPress={() => navigation.navigate('Habit')}
-          />
-      </View>
+      {/* Custom styled button */}
+      <TouchableOpacity
+        style={styles.buttonContainer}
+        onPress={() => navigation.navigate('Habit')}
+      >
+        <Text style={styles.buttonText}>Go to Habit Screen</Text>
+      </TouchableOpacity>
+    </View>
   );
 }

@@ -1,19 +1,21 @@
 // frontend/screens/LoginScreen.js
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, TextInput } from 'react-native';
+import styles from './LoginScreen.styles'; // Import the styles
 
 export default function LoginScreen({ navigation }) {
   return (
-    <View>
-      <h3>Login Screen</h3>
-        <h2>Login details</h2>
-        <text>Username: </text> <textarea>             </textarea>
-        <text>Password </text> <textarea>     </textarea>
-      <Button
-        title="Go to Overview"
-        title2="Login"
-        onPress={() => navigation.navigate('Overview')}
-      />
+    <View style={styles.container}>
+      <Text style={styles.title}>Login Screen</Text>
+      <Text style={styles.subtitle}>Please enter your username and password</Text>
+
+      <Text style={styles.label}>Username:</Text>
+      <TextInput style={styles.input} placeholder="Enter Username" />
+
+      <Text style={styles.label}>Password:</Text>
+      <TextInput style={styles.input} placeholder="Enter Password" secureTextEntry={true} />
+
+      <Button title="Login" color = "#349923" onPress={() => navigation.navigate('Overview')} />
     </View>
   );
 }

@@ -20,8 +20,7 @@ export default function App() {
   );
 }
 
-// Example HabitScreen.js for adding tasks
-import React, { useState } from 'react';
+
 import { View, Text, TextInput, Button } from 'react-native';
 import axios from 'axios';
 
@@ -30,7 +29,7 @@ export default function HabitScreen() {
   const [frequency, setFrequency] = useState('');
 
   const addHabit = () => {
-    axios.post('http://localhost:5000/tasks', { title, frequency })
+    axios.post('http://localhost:5000/api/habits', { title, frequency })
       .then(response => alert("Habit added successfully"))
       .catch(error => console.error("Error adding habit", error));
   };
