@@ -1,0 +1,83 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Container for the Monthly Overview */
+.monthly-overview-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  overflow: hidden;
+}
+
+/* Month and Year Header */
+.monthly-overview-container h2 {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Calendar Grid Container */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
+  gap: 8px;
+  padding: 20px;
+}
+
+/* Style for Each Day */
+.calendar-day {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.calendar-day:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.calendar-day:active {
+  background-color: #45a049;
+}
+
+/* Add specific styling for weekends */
+.calendar-day:nth-child(7),
+.calendar-day:nth-child(1) {
+  color: #e74c3c; /* Red for Saturday and Sunday */
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .monthly-overview-container {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .calendar-grid {
+    grid-template-columns: repeat(7, 1fr); /* Keep 7 columns for small screens */
+  }
+}
