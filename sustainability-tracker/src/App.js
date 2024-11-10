@@ -40,15 +40,23 @@ function App() {
   return (
     <Router>
       <div className="App">
+        {!isLoggedIn && (
+            <div className="app-name">
+              Green Habit Tracker
+            </div>
+        )}  
         {/* Navigation Links */}
-        <nav>
+        <nav className={isLoggedIn ? '' : 'nav-hidden'}>
           <ul>
-            <li>
-              <Link to="/">Monthly Overview</Link>  {/* Link to Monthly Overview */}
-            </li>
             {isLoggedIn && (
               <li>
-                <Link to="/habit-tracker">Habit Tracker</Link>
+                <Link to="/">Monthly Overview</Link>  {/* Link to Monthly Overview */}
+              </li>
+            )}
+        
+            {isLoggedIn && (
+              <li>
+                <Link to="/habit-tracker">Habits</Link>
               </li>
             )}
           </ul>

@@ -1,17 +1,20 @@
 .App {
   text-align: center;
   font-family: Arial, sans-serif;
+  border-radius: 8px;
 }
 
 input {
   margin-right: 10px;
   padding: 8px;
   width: 200px;
+  border-radius: 8px;
 }
 
 button {
   padding: 8px 12px;
   cursor: pointer;
+  border-radius: 8px;
 }
 
 ul {
@@ -29,8 +32,14 @@ li:hover {
 }
 /* Add this to App.css or your CSS file */
 nav {
-  background-color: #4CAF50;
+  background-color: #70ad72;
   padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.nav-hidden {
+  display: none;
 }
 
 nav ul {
@@ -51,4 +60,17 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+}
+
+.app-name {
+  background-color: #70ad72; /* Green color */
+  color: white; /* White text color */
+  font-family: Arial, sans-serif; /* Match the font family used in the nav */
+  font-weight: bold; /* Bold font weight */
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5em;
+  margin: 20px auto;
+  width: fit-content;
+  border-radius: 8px;
 }
