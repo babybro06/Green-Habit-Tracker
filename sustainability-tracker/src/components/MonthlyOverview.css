@@ -55,6 +55,18 @@ body {
   transition: background-color 0.3s;
 }
 
+.calendar-day.current-day {
+  background-color: #deeadb;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border-radius: 50%; /* Make it round */
+  padding: 10px;
+}
+
+.calendar-day:empty {
+  visibility: hidden;
+}
+
 .calendar-day:hover {
   background-color: #70ad72;
   color: white;
@@ -65,8 +77,8 @@ body {
 }
 
 /* Add specific styling for weekends */
-.calendar-day:nth-child(7),
-.calendar-day:nth-child(1) {
+.calendar-day:nth-child(7n + 6),
+.calendar-day:nth-child(7n + 7) {
   color: #e74c3c; /* Red for Saturday and Sunday */
 }
 

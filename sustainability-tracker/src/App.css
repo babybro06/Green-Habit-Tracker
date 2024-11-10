@@ -63,10 +63,10 @@ nav a:hover {
 }
 
 .app-name {
-  background-color: #70ad72; /* Green color */
-  color: white; /* White text color */
-  font-family: Arial, sans-serif; /* Match the font family used in the nav */
-  font-weight: bold; /* Bold font weight */
+  background-color: #70ad72;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
   padding: 20px;
   text-align: center;
   font-size: 1.5em;
