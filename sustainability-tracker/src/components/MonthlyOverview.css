@@ -36,6 +36,31 @@ body {
   margin: 0;
 }
 
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #70ad72;
+  color: white;
+}
+
+.calendar-header h2 {
+  margin: 0;
+}
+
+.calendar-header button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.calendar-header button:hover {
+  background-color: #4b8c49;
+}
+
 /* Calendar Grid Container */
 .calendar-grid {
   display: grid;

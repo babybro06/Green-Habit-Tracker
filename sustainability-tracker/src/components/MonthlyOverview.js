@@ -25,16 +25,38 @@ function MonthlyOverview({ onSelectDay }) {
   const daysInMonth = (month, year) => new Date(year, month, 0).getDate();  // Ensure month is 0-indexed
   const days = Array.from({ length: firstDayOfMonth }, () => "").concat(
     Array.from({ length: daysInMonth(month, year) }, (_, i) => i + 1));
-
-  console.log('Days in a month: ', daysInMonth);
-  console.log('first day: ', firstDayOfMonth);
   
   // Format the month and year for display
   const formattedMonthYear = new Date(year, month - 1).toLocaleString('default', { month: 'long', year: 'numeric' });
 
+  // Handle previous and next month navigation
+  const handlePreviousMonth = () => {
+    if (month === 0) {
+      setMonth(11);
+      setYear(year - 1);
+    } else {
+      setMonth(month - 1);
+    }
+  };
+
+  const handleNextMonth = () => {
+    if (month === 11) {
+      setMonth(0);
+      setYear(year + 1);
+    } else {
+      setMonth(month + 1);
+    }
+  };
+
   return (
     <div className="monthly-overview-container">
-      <h2>{formattedMonthYear}</h2>
+
+      <div className="calendar-header">
+        <button onClick={handlePreviousMonth}>&lt;</button>
+        <h2>{formattedMonthYear}</h2>
+        <button onClick={handleNextMonth}>&gt;</button>
+      </div>
+      
       <div className="calendar-grid">
         {days.map((day, index) => (
           <div
