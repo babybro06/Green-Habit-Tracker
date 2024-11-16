@@ -3,7 +3,14 @@ import './HabitTracker.css';
 
 function HabitTracker({ day }) {
   const [habitName, setHabitName] = useState('');
-  const [habits, setHabits] = useState([]); // Store habits
+  const [habits, setHabits] = useState([
+    'Turn off lights',
+    'Recycling',
+    'No food wasted',
+    'Cold shower',
+    'Plastic-free',
+    'Sustainable transportation',
+  ]); // Default habits
 
   // Handle the addition of a new habit
   const handleAddHabit = () => {
@@ -21,8 +28,6 @@ function HabitTracker({ day }) {
 
   return (
     <div className="habit-tracker">
-      <h2>Habit Tracker for {day}</h2>
-
       {/* Form to add new habit */}
       <div className="add-habit-form">
         <input
