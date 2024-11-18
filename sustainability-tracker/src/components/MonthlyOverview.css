@@ -21,7 +21,7 @@ body {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 350px;
+  width: 600px;
   overflow: hidden;
 }
 
@@ -100,6 +100,14 @@ body {
 .calendar-day:active {
   background-color: #45a049;
 }
+.footprint-link {
+  color: blue;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #70ad72;
+}
+
 
 /* Add specific styling for weekends */
 .calendar-day:nth-child(7n + 6),

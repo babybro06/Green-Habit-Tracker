@@ -4,18 +4,18 @@ import './HabitTracker.css';
 function HabitTracker({ day }) {
   const [habitName, setHabitName] = useState('');
   const [habits, setHabits] = useState([
-    'Turn off lights',
-    'Recycling',
-    'No food wasted',
-    'Cold shower',
-    'Plastic-free',
-    'Sustainable transportation',
-  ]); // Default habits
+    { name: 'Turn off lights', completed: false },
+    { name: 'Recycling', completed: false },
+    { name: 'No food wasted', completed: false },
+    { name: 'Cold shower', completed: false },
+    { name: 'Plastic-free', completed: false },
+    { name: 'Sustainable transportation', completed: false },
+  ]); // Default habits with completion status
 
   // Handle the addition of a new habit
   const handleAddHabit = () => {
     if (habitName.trim() !== '') {
-      setHabits([...habits, habitName]); // Add habit to state
+      setHabits([...habits, { name: habitName, completed: false }]); // Add new habit with completed as false
       setHabitName(''); // Clear input field
     }
   };
@@ -23,6 +23,14 @@ function HabitTracker({ day }) {
   // Handle the deletion of a habit
   const handleDeleteHabit = (index) => {
     const updatedHabits = habits.filter((_, i) => i !== index); // Remove habit at the specified index
+    setHabits(updatedHabits);
+  };
+
+  // Toggle completion status of a habit
+  const toggleHabitCompletion = (index) => {
+    const updatedHabits = habits.map((habit, i) =>
+      i === index ? { ...habit, completed: !habit.completed } : habit
+    ); // Toggle the completed status
     setHabits(updatedHabits);
   };
 
@@ -46,7 +54,15 @@ function HabitTracker({ day }) {
         ) : (
           habits.map((habit, index) => (
             <div key={index} className="habit-item">
-              <span>{habit}</span>
+              <span
+                onClick={() => toggleHabitCompletion(index)} // Toggle completion on click
+                style={{
+                  textDecoration: habit.completed ? 'line-through' : 'none',
+                  cursor: 'pointer',
+                }}
+              >
+                {habit.name}
+              </span>
               <button onClick={() => handleDeleteHabit(index)}>Delete</button>
             </div>
           ))

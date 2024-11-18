@@ -19,7 +19,7 @@ function MonthlyOverview({ onSelectDay }) {
   const [year, setYear] = useState(currentYear);
 
   // Get the first day of the month (0 = Sunday, 1 = Monday, etc.)
-  const firstDayOfMonth = new Date(year, month - 1, 1).getDay() - 1;
+const firstDayOfMonth = (new Date(year, month - 1, 1).getDay() + 6) % 7;
 
   // Function to calculate the number of days in a month
   const daysInMonth = (month, year) => new Date(year, month, 0).getDate();  // Ensure month is 0-indexed
@@ -56,6 +56,15 @@ function MonthlyOverview({ onSelectDay }) {
         <h2>{formattedMonthYear}</h2>
         <button onClick={handleNextMonth}>&gt;</button>
       </div>
+
+      <a
+        href="https://www.footprintcalculator.org/home/en"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="footprint-link"
+      >
+        Footprint Calculator
+      </a>
       
       <div className="calendar-grid">
         {days.map((day, index) => (

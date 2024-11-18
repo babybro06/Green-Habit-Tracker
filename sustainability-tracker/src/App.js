@@ -4,34 +4,6 @@ import Login from './components/Login';
 import HabitTracker from "./components/HabitTracker";
 import MonthlyOverview from "./components/MonthlyOverview";
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-/*
-function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [selectedDay, setSelectedDay] = useState(null);
-
-  const handleSelectDay = day => {
-    setSelectedDay(day);
-  };
-
-  return (
-    <div className="App">
-      {!isLoggedIn ? (
-        <Login onLogin={() => setIsLoggedIn(true)} />
-      ) : !selectedDay ? (
-        <MonthlyOverview
-          month={new Date().getMonth()}
-          year={new Date().getFullYear()}
-          onSelectDay={handleSelectDay}
-        />
-      ) : (
-        <HabitTracker day={selectedDay} />
-      )}
-    </div>
-  );
-}
-
-export default App;
-*/
 
 
 function App() {
