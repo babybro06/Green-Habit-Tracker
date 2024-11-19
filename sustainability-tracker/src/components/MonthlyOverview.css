@@ -106,11 +106,11 @@ body {
   background-color: #45a049;
 }
 .footprint-link {
-  color: blue;
+  color: darkred;
   font-weight: bold;
   cursor: pointer;
   padding: 10px;
-  background-color: rosybrown;
+  background-color: lightblue;
   text-align: center;
   border-bottom-width: 5px;
 }

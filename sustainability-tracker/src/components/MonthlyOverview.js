@@ -54,9 +54,7 @@ const firstDayOfMonth = (new Date(year, month - 1, 1).getDay() + 6) % 7;
 
         <div className="blank-space">
           <h1>
-
             _______
-
           </h1>
         </div>
         <div className={"blank-space"}>
@@ -71,9 +69,7 @@ const firstDayOfMonth = (new Date(year, month - 1, 1).getDay() + 6) % 7;
           </div>
         <div className={"blank-space"}>
         <h1>
-
           _______
-
         </h1>
 
         </div>
