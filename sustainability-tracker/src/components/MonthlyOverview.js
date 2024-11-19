@@ -49,35 +49,56 @@ const firstDayOfMonth = (new Date(year, month - 1, 1).getDay() + 6) % 7;
   };
 
   return (
-    <div className="monthly-overview-container">
+      <div className="monthly-overview-container">
 
-      <div className="calendar-header">
-        <button onClick={handlePreviousMonth}>&lt;</button>
-        <h2>{formattedMonthYear}</h2>
-        <button onClick={handleNextMonth}>&gt;</button>
-      </div>
 
-      <a
-        href="https://www.footprintcalculator.org/home/en"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="footprint-link"
-      >
-        Footprint Calculator
-      </a>
-      
-      <div className="calendar-grid">
-        {days.map((day, index) => (
-          <div
-            key={index}
-            className={`calendar-day ${day === currentDay && month === currentMonth && year === currentYear ? 'current-day' : ''}`}
-            onClick={() => day && onSelectDay(day)}
+        <div className="blank-space">
+          <h1>
+
+            _______
+
+          </h1>
+        </div>
+        <div className={"blank-space"}>
+          <a
+              href="https://www.footprintcalculator.org/home/en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footprint-link"
           >
-            {day || ""}
+            Footprint Calculator
+          </a>
           </div>
-        ))}
+        <div className={"blank-space"}>
+        <h1>
+
+          _______
+
+        </h1>
+
+        </div>
+
+        <div className="calendar-header">
+          <button onClick={handlePreviousMonth}>&lt;</button>
+          <h2>{formattedMonthYear}</h2>
+          <button onClick={handleNextMonth}>&gt;</button>
+        </div>
+
+
+        <div className="calendar-grid">
+          {days.map((day, index) => (
+              <div
+                  key={index}
+                  className={`calendar-day ${day === currentDay && month === currentMonth && year === currentYear ? 'current-day' : ''}`}
+                  onClick={() => day && onSelectDay(day)}
+              >
+                {day || ""}
+              </div>
+          ))}
+        </div>
+
       </div>
-    </div>
+
   );
 }
 

@@ -25,6 +25,11 @@ body {
   overflow: hidden;
 }
 
+.blank-space{
+  color: lightblue;
+  background-color: lightblue;
+  text-align: center;
+}
 /* Month and Year Header */
 .monthly-overview-container h2 {
   background-color: #70ad72;
@@ -105,7 +110,9 @@ body {
   font-weight: bold;
   cursor: pointer;
   padding: 10px;
-  background-color: #70ad72;
+  background-color: rosybrown;
+  text-align: center;
+  border-bottom-width: 5px;
 }
 
 
