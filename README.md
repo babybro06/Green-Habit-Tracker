@@ -1,3 +1,74 @@
+# 🌱 Green Habits Tracker
+
+Welcome to the **Green Habits Tracker**, a sustainability-focused app designed to help users build and maintain eco-friendly habits. This app empowers users to track their progress, visualize their monthly achievements, and contribute to a greener planet—one habit at a time.
+
+---
+
+## 🚀 Features
+
+- **User Authentication**:  
+  Secure login system with valid credentials.
+
+- **Monthly Habit View**:  
+  A clear and intuitive dashboard that displays users' sustainability goals and progress over the current month.
+
+- **Eco-Friendly Habit Suggestions**:  
+  Provides practical and impactful habit recommendations for users to adopt.
+
+---
+
+## 📋 Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/green-habits-tracker.git
+2. Navigate to the project directory 
+    ```cd green-habits-tracker```
+3. install dependencies
+   ``` npm install```
+
+---
+## 🛠️ Tech Stack
+
+- **Frontend**: HTML, CSS, JavaScript  
+- **Backend**: Node.js, Express.js  
+- **Database**: MongoDB  
+- **Authentication**: JWT (JSON Web Tokens)
+
+---
+
+## 📚 How to Use
+
+1. **Sign Up / Log In**:  
+   Create an account or log in with your existing credentials.
+
+2. **Set Your Habits**:  
+   Choose from a list of suggested habits or create custom ones.
+
+3. **Track Progress**:  
+   View your monthly progress in the dashboard.
+
+4. **Celebrate Milestones**:  
+   Get badges and rewards for completing your goals!
+
+---
+
+## 💡 Contributing
+
+We welcome contributions! If you want to report a bug, suggest a feature, or contribute code, feel free to open an issue or submit a pull request.
+
+
+---
+
+## 🌍 Let's Make a Difference!
+
+Join us in creating a more sustainable future by using the Green Habits Tracker. Together, we can make every small action count! 💚
+
+## Authors
+
+Vedant Pandey and Aarushi Prasad
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
