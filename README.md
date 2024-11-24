@@ -15,6 +15,8 @@ Welcome to the **Green Habits Tracker**, a sustainability-focused app designed t
 - **Eco-Friendly Habit Suggestions**:  
   Provides practical and impactful habit recommendations for users to adopt.
 
+- **Environmental Footprint Calculator**:  
+  An easy tool to assess your current environmental impact.
 ---
 
 ## 📋 Installation
@@ -42,13 +44,17 @@ Welcome to the **Green Habits Tracker**, a sustainability-focused app designed t
 1. **Sign Up / Log In**:  
    Create an account or log in with your existing credentials.
 
-2. **Set Your Habits**:  
+2. **Calculate Your Environmental Footprint**:  
+   Before using the app for the first time, calculate your environmental footprint using our integrated tool. This provides a baseline to measure your progress over time.
+   We recommend recalculating periodically to see how your eco-friendly habits are making a difference.
+
+3. **Set Your Habits**:  
    Choose from a list of suggested habits or create custom ones.
 
-3. **Track Progress**:  
+4. **Track Progress**:  
    View your monthly progress in the dashboard.
 
-4. **Celebrate Milestones**:  
+5. **Celebrate Milestones**:  
    Get badges and rewards for completing your goals!
 
 ---
